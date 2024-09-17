@@ -1,9 +1,6 @@
 # Hono API CRUD Basics
 Basics Hono API routes for CRUD (GET, POST, PUT, DELETE)
 
-## Live version (Cloudflare Workers)
-- [ https://hono-api-crud.kevin-kevin6458.workers.dev]( https://hono-api-crud.kevin-kevin6458.workers.dev)
-
 ## Available routes
 ### GET /books
 - Retrieves a list of all books
