@@ -11,14 +11,19 @@ app.get("/", (c) => {
   })
 });
 
+
+/**
+ * 
+ * API Routes
+ */
 // GET all books
-app.get("/books", (c) => {
+app.get("/api/books", (c) => {
   return c.json(books);
 });
 
 // GET a book by id
 // GET with a dynamic param
-app.get("/books/:id", (c) => {
+app.get("/api/books/:id", (c) => {
   const bookId = c.req.param("id");
   const book = books.find((book) => book.id === parseInt(bookId));
 
@@ -27,7 +32,7 @@ app.get("/books/:id", (c) => {
 
 // ADD a new book
 // POST
-app.post("/books", async (c) => {
+app.post("/api/books", async (c) => {
   try {
     const { title, author } = await c.req.json();
     const newBook = { id: books.length + 1, title, author };
@@ -42,7 +47,7 @@ app.post("/books", async (c) => {
 
 // UPDATE a book by id
 // PUT
-app.put("/books/:id", async (c) => {
+app.put("/api/books/:id", async (c) => {
   try {
     const bookId = c.req.param("id");
     const book = books.find((book) => book.id === parseInt(bookId));
@@ -64,7 +69,7 @@ app.put("/books/:id", async (c) => {
 
 // DELETE a book by id
 // DELETE
-app.delete("/books/:id", (c) => {
+app.delete("/api/books/:id", (c) => {
   const bookId = c.req.param("id");
   const bookIndex = books.findIndex((book) => book.id === parseInt(bookId));
 

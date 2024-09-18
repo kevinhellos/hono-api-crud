@@ -5,19 +5,19 @@ Basics Hono API routes for CRUD (GET, POST, PUT, DELETE)
 > The configuration for this Hono App has been setup to be deployed in Cloudflare Workers
 
 ## Available routes
-### GET /books
+### GET /api/books
 - Retrieves a list of all books
 
-### GET /books/:id
+### GET /api/books/:id
 - Retrieves a book by its id
 
-### POST /books
+### POST /api/books
 - Adds a new book
 
-### PUT /books
+### PUT /api/books
 - Updates a book
 
-### DELETE /books/id
+### DELETE /api/books/id
 - Deletes a book by its id
 
 ## Running the project
